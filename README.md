@@ -10,7 +10,7 @@ Image Viewer supports viewing popular formats such as:
 #### version 1
 <p align='center'>
 
-<img src='docs/version_1.gif' width='1000' alt='version_1'>
+<img src='docs/version_1.gif' width='800' alt='version_1'>
 </p>
 
 ## Quick Overview

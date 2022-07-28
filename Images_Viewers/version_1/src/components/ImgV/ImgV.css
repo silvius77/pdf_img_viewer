@@ -1,0 +1,69 @@
+.img_prew{
+    border-radius: 5px;
+    width: initial;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
+.img_prew:hover{
+    transform: scale(1.03);
+}
+
+
+.right_arrow{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.left_arrow{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+  
+.close{
+    position:absolute;
+    bottom:50px;
+    right:10px;
+    margin:10px;
+    padding:5px 3px;
+}
+  
+.downloader{
+    position:absolute;
+    bottom:47px;
+    right:50px;
+    margin:10px;
+    padding:5px 3px;
+}
+
+.img_rotate_0 {
+    transform: rotate(0deg);
+  }
+.img_rotate_90 {
+    transform: rotate(90deg);
+  }
+.img_rotate_180 {
+    transform: rotate(180deg);
+  }
+.img_rotate_270 {
+    transform: rotate(-90deg);
+  }

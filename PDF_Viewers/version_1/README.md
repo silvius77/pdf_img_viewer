@@ -26,12 +26,12 @@ yarn start
 
 ### Short description
 
-**File:** src/components/ImgV/**PdfViewer111111111111111111111111111.js**
+**File:** src/components/PdfViewer/**PdfViewer.js**
 
 `Contains the main application code. Just import it into your project.
-In the place where you want to view images through the viewer.`
+In the place where you want to view PDF through the viewer.`
 
-**File:** src/components/ImgV/**ImgV.css**
+**File:** src/components/PdfViewer/**PdfViewer.css**
 
 `Contains the main styles of the component`
 
@@ -39,20 +39,16 @@ In the place where you want to view images through the viewer.`
 
 Example:
 ```
-import ImgV from "./components/ImgV/ImgV";
+import React, { Component } from 'react'
+import PdfViewer from './components/PdfViewer/PdfViewer';
 ```
-Pass the list of image links to the viewer as an array.
+Call the component in the place where you want to display the PDF viewer:
+- Pass the URL link on PDF file в переменную url_document
+- Pass the TITLE name PDF file в переменную title
+
 
 ```
-const data = [
-    "img/pet.jpeg",
-    "https://img1.fonwall.ru/o/cc/cats-cat-yawn.jpg",
-    "https://img1.fonwall.ru/o/st/flower-gerbera-pink-color-closeup.jpeg",
-  ]
-```
-In the place where you want to display the image preview, call the component
-```
-<ImgV data={data}/>
+<PdfViewer title ="sample" url_document = {'/sample.pdf'} />
 ```
 
 **File:** version_1/public/**index.html**

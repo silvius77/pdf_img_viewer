@@ -9,8 +9,17 @@ Image Viewer supports viewing popular formats such as:
 #### version 1
 <p align='center'>
 
-<img src='../../docs/version_1.gif' width='800' alt='version_1'>
+<img src='../../docs/img_v1.gif' width='800' alt='version_1'>
 </p>
+
+### Main functionality:
+- Opening an image file
+- Enlarge \ Decrease
+- Rotate 360 degrees in 90 increments
+- Download original image
+- Switch to Previous\Next Image
+- Bootstrap support
+
 
 ## Quick Overview
 

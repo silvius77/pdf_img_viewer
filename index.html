@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="resize.js" defer></script>
+    <script src="transformations.js" defer></script>
+    <title>index.html</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="container">
+
+            <img ondragstart="return false" id="main_img" src="img/2.jpeg">
+
+            <!-- CLOSE ARROW -->
+            <div class="wrapper_close controls" title="Close" id="close">
+                <div class="close_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="controls_svg icon icon-tabler icon-tabler-x"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- PREVIOUS ARROW -->
+            <div class="wrapper_previous controls" title="Previous image" id="previous">
+                <div class="prev_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="controls_svg icon icon-tabler icon-tabler-chevron-left" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <polyline points="15 6 9 12 15 18" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- NEXT ARROW -->
+            <div class="wrapper_next controls" title="Next image" id="next">
+                <div class="next_arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="controls_svg icon icon-tabler icon-tabler-chevron-right colors" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <polyline points="9 6 15 12 9 18" />
+                    </svg>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="buttons_container">
+
+        <!-- ROTATE LEFT -->
+        <div class="wrapper_rotate_left button" title="Rotate image left" id="rotate_left">
+            <div class="rotate_left">
+                <svg xmlns="http://www.w3.org/2000/svg" class="button_svg icon icon-tabler icon-tabler-rotate-2"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 4.55a8 8 0 0 0 -6 14.9m0 -4.45v5h-5" />
+                    <line x1="18.37" y1="7.16" x2="18.37" y2="7.17" />
+                    <line x1="13" y1="19.94" x2="13" y2="19.95" />
+                    <line x1="16.84" y1="18.37" x2="16.84" y2="18.38" />
+                    <line x1="19.37" y1="15.1" x2="19.37" y2="15.11" />
+                    <line x1="19.94" y1="11" x2="19.94" y2="11.01" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- FIT IMAGE -->
+        <div class="wrapper_fit button" title="Fit image" id="fit">
+            <div class="fit_image">
+                <svg xmlns="http://www.w3.org/2000/svg" class="button_svg icon icon-tabler icon-tabler-arrows-maximize"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <polyline points="16 4 20 4 20 8" />
+                    <line x1="14" y1="10" x2="20" y2="4" />
+                    <polyline points="8 20 4 20 4 16" />
+                    <line x1="4" y1="20" x2="10" y2="14" />
+                    <polyline points="16 20 20 20 20 16" />
+                    <line x1="14" y1="14" x2="20" y2="20" />
+                    <polyline points="8 4 4 4 4 8" />
+                    <line x1="4" y1="4" x2="10" y2="10" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- ROTATE RIGHT -->
+        <div class="wrapper_rotate_right button" title="Rotate image right" id="rotate_right">
+            <div class="rotate_right">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="button_svg icon icon-tabler icon-tabler-rotate-clockwise-2" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" />
+                    <line x1="5.63" y1="7.16" x2="5.63" y2="7.17" />
+                    <line x1="4.06" y1="11" x2="4.06" y2="11.01" />
+                    <line x1="4.63" y1="15.1" x2="4.63" y2="15.11" />
+                    <line x1="7.16" y1="18.37" x2="7.16" y2="18.38" />
+                    <line x1="11" y1="19.94" x2="11" y2="19.95" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- DOWNLOAD IMAGE -->
+        <div class="wrapper_download button" title="Download image" id="download_item">
+            <div class="download">
+                <svg xmlns="http://www.w3.org/2000/svg" class="button_svg icon icon-tabler icon-tabler-download"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <polyline points="7 11 12 16 17 11" />
+                    <line x1="12" y1="4" x2="12" y2="16" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="wrapper_info button" title="Info" id="info">
+            <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" class="button_svg icon icon-tabler icon-tabler-info-circle"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                    <polyline points="11 12 12 12 12 16 13 16" />
+                </svg>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="informations" id="inform">
+        <p class="noselect"><b class="keyboard">Ctrl →</b>&nbsp;  - Next image</p>
+        <p class="noselect"><b class="keyboard">Ctrl ←</b>&nbsp;  - Previous image</p>
+        <p class="noselect"><b class="keyboard">Ctrl&nbsp; ↑&nbsp;</b>&nbsp; - Zoom in </p>
+        <p class="noselect"><b class="keyboard">Ctrl&nbsp; ↓&nbsp;</b>&nbsp; - Zoom out </p>
+        <p class="noselect"><b class="keyboard">Ctrl&nbsp; 0&nbsp;</b>&nbsp; - Fit image </p>
+        <hr />
+        <p><b class="noselect">Filename: </b> <code class="fix_lenth">ref2e.jpg</code></p>
+    </div>
+
+
+
+    <script src="effects.js" />
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+:root {
+    --wrapper_width: 100px;
+    --wrapper_close_height: 100px;
+    --wrapper_height_next_prew:80%;
+    --svg_size:50px;
+    --wrapper_top: 10.5%;
+
+    --arrow_width: 50px;
+    --arrow_height: 50px;
+   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+}
+
+#main_img {
+    cursor: move;
+    position: relative;
+}
+
+.icon-tabler {
+    z-index: 999;
+    filter: drop-shadow(1px 1px 6px rgb(255 255 255 / 1.4));
+    color: #333;
+}
+
+.icon-tabler:hover {
+    color: #fff;
+}
+
+.controls_svg {
+    filter: drop-shadow(1px 1px 6px rgb(0 0 0 / 1.4));
+    color: #fff;
+    width: var(--svg_size);
+    height: var(--svg_size);
+}
+
+.controls {
+    position: fixed;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.controls:hover {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+
+.hide_element {
+    opacity: 0;
+    transition: 3.5s;
+}
+
+.wrapper {
+    height: 99vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_close {
+    top: 0;
+    right: 0;
+    width: var(--wrapper_width);
+    height: var(--wrapper_close_height);
+}
+
+.wrapper_previous {
+    top: var(--wrapper_top);
+    left: 0;
+    width: var(--wrapper_width);
+    height: var(--wrapper_height_next_prew);
+}
+
+.wrapper_next {
+    top: var(--wrapper_top);
+    width: var(--wrapper_width);
+    right: 0px;
+    height: var(--wrapper_height_next_prew);
+}
+
+.prev_arrow {
+    position: fixed;
+    top: 50%;
+    width: var(--arrow_width);
+    height: var(--arrow_height);
+    left: 25px;
+}
+
+.next_arrow {
+    position: fixed;
+    right: 25px;
+    width: var(--arrow_width);
+    height: var(--arrow_height);
+    top: 50%;
+}
+
+.close_btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+}
+
+.buttons_container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+}
+
+.button {
+    margin: 55px;
+    padding: 5px 5px 5px 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    filter: drop-shadow(1px 1px 6px rgb(0 0 0 / 1.4));
+    border-radius: 35px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.5);
+    transition: transform .5s;
+}
+
+.button_svg {
+    z-index: 999;
+    filter: drop-shadow(1px 1px 6px rgb(255 255 255 / 1.4));
+    color: #fff;
+    width: var(--svg_size);
+    height: var(--svg_size);
+}
+#inform{
+    visibility: hidden;
+}
+.informations {
+    
+    position: fixed;
+    width: auto;
+    height: auto;
+    justify-content: start;
+    top: 5px;
+    margin: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.informations > p {
+    color: #fff;
+    padding: 5px 15px 0 15px;
+    z-index: 999;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.keyboard{
+    background-color: #fff;
+    color: #333;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: large;
+}
+
+.fix_lenth{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: small;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-device-width: 1400px) {
+    :root {
+        --wrapper_width: 150px;
+        --wrapper_close_height: 150px;
+        --wrapper_height_next_prew:75%;
+        --svg_size:75px;
+        --wrapper_top: 15.5%;
+    }
+    .close_btn {
+        top: 35px;
+        right: 38px;
+    }
+
+    .next_arrow{
+        right: 50px;
+    }
+
+    .prev_arrow{
+        left: 40px;
+    }
+    .hide_element {
+        opacity: 0.6;
+        transition: 5s;
+    }
+
+}
+
+@media screen and (max-device-width: 1200px) {
+    #info{
+        display: none;
+    }
+    .informations{
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 992px) {
+}
+
+@media screen and (max-device-width: 768px) {
+
+}
+
+@media screen and (max-device-width: 576px) {
+
+}
